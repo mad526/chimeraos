@@ -1,11 +1,11 @@
 #! /bin/bash
 
-export VERSION="46"
+export VERSION="44-1"
 export SYSTEM_DESC="ChimeraOS"
 export SYSTEM_NAME="chimeraos"
 export USERNAME="gamer"
 export SIZE="10000MB"
-export ARCHIVE_DATE=$(date -d 'yesterday' +%Y/%m/%d)
+export ARCHIVE_DATE="2023/09/07"
 export WEBSITE="https://chimeraos.org"
 export DOCUMENTATION_URL="https://chimeraos.org/about"
 export BUG_REPORT_URL="https://github.com/ChimeraOS/chimeraos/issues"
@@ -18,22 +18,18 @@ export PACKAGES="\
 	alsa-firmware \
 	alsa-utils \
 	amd-ucode \
-	bash-completion \
 	broadcom-wl-dkms \
-	bzip2 \
 	cifs-utils \
 	diffutils \
 	dkms \
-	distrobox \
 	dmidecode \
 	dosbox \
-	efibootmgr \
+	eog \
 	epiphany \
 	ethtool \
 	evtest \
 	ffmpeg \
-	file \
-	ffmpegthumbnailer \
+	file-roller \
 	firejail \
 	flatpak \
 	fmt \
@@ -42,7 +38,6 @@ export PACKAGES="\
 	fwupd \
 	gamemode \
 	git \
-	gnome-browser-connector \
 	gnome-console \
 	gnome-control-center \
 	gnome-disk-utility \
@@ -50,17 +45,14 @@ export PACKAGES="\
 	gnome-session \
 	gnome-shell \
 	gnome-software \
-	gnome-system-monitor \
 	gnome-text-editor \
 	gst-plugin-pipewire \
-	gzip \
 	haveged \
 	htop \
 	intel-gpu-tools \
 	intel-media-driver \
 	intel-ucode \
 	intel-undervolt \
-	less \
 	lib32-curl \
 	lib32-fontconfig \
 	lib32-freetype2 \
@@ -102,8 +94,6 @@ export PACKAGES="\
 	linux-firmware \
 	liquidctl \
 	logrotate \
-	lrzip \
-	loupe \
 	lshw \
 	mesa-demos \
 	modemmanager \
@@ -115,7 +105,6 @@ export PACKAGES="\
 	nss-mdns \
 	openal \
 	openssh \
-	p7zip \
 	pipewire \
 	pipewire-alsa \
 	pipewire-jack \
@@ -131,11 +120,7 @@ export PACKAGES="\
 	sshfs \
 	steam \
 	sudo \
-	tar \
-	tree \
 	ttf-liberation \
-	unace \
-	unrar \
 	unzip \
 	usb_modeswitch \
 	usbutils \
@@ -152,25 +137,27 @@ export PACKAGES="\
 	xdg-user-dirs-gtk \
 	xf86-video-amdgpu \
 	xorg-server \
-	xz \
-	zip \
 "
 
 export PACKAGE_OVERRIDES="\
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.6.7-chos5-1/linux-chimeraos-6.6.7.chos5-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.6.7-chos5-1/linux-chimeraos-headers-6.6.7.chos5-1-x86_64.pkg.tar.zst\
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.1-chos1-1/lib32-libva-mesa-driver-1--23.3.1.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.1-chos1-1/lib32-mesa-1--23.3.1.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.1-chos1-1/lib32-mesa-vdpau-1--23.3.1.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.1-chos1-1/lib32-vulkan-intel-1--23.3.1.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.1-chos1-1/lib32-vulkan-radeon-1--23.3.1.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.1-chos1-1/libva-mesa-driver-1--23.3.1.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.1-chos1-1/mesa-1--23.3.1.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.1-chos1-1/mesa-vdpau-1--23.3.1.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.1-chos1-1/vulkan-intel-1--23.3.1.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.1-chos1-1/vulkan-radeon-1--23.3.1.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.5.6-chos1-1/linux-chimeraos-6.5.6.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.5.6-chos1-1/linux-chimeraos-headers-6.5.6.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.9-chos1-1/lib32-libva-mesa-driver-23.1.9.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.9-chos1-1/lib32-mesa-23.1.9.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.9-chos1-1/lib32-mesa-vdpau-23.1.9.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.9-chos1-1/lib32-vulkan-intel-23.1.9.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.9-chos1-1/lib32-vulkan-radeon-23.1.9.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.9-chos1-1/libva-mesa-driver-23.1.9.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.9-chos1-1/mesa-23.1.9.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.9-chos1-1/mesa-vdpau-23.1.9.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.9-chos1-1/vulkan-intel-23.1.9.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.9-chos1-1/vulkan-radeon-23.1.9.chos1-1-x86_64.pkg.tar.zst \
 	https://archive.archlinux.org/repos/2023/06/28/extra/os/x86_64/libretro-pcsx2-11900-2-x86_64.pkg.tar.zst \
 	https://archive.archlinux.org/packages/l/libretro-mame/libretro-mame-85763-1-x86_64.pkg.tar.zst \
+	https://archive.archlinux.org/packages/b/bluez/bluez-5.68-1-x86_64.pkg.tar.zst \
+	https://archive.archlinux.org/packages/b/bluez-hid2hci/bluez-hid2hci-5.68-1-x86_64.pkg.tar.zst \
+	https://archive.archlinux.org/packages/b/bluez-plugins/bluez-plugins-5.68-1-x86_64.pkg.tar.zst \
+	https://archive.archlinux.org/packages/b/bluez-utils/bluez-utils-5.68-1-x86_64.pkg.tar.zst \
 "
 
 # Each entry is the clone url (https://aur.archlinux.org/{AUR_PACKAGE}.git)
@@ -186,8 +173,7 @@ export AUR_PACKAGES="\
 	downgrade \
 	frzr \
 	gamescope-plus \
-	gamescope-session-steam-git \
-	gamescope-session-steam-plus-git \
+	gamescope-session-git \
 	handygccs-git \
 	hhfc-git \
 	legendary \
@@ -198,14 +184,11 @@ export AUR_PACKAGES="\
 	libretro-prosystem-git \
 	libretro-stella2014-git \
 	libretro-virtualjaguar-git \
-	kanit-font \
 	nintendo-udev \
 	opengamepadui-bin \
 	opengamepadui-session-git \
 	pikaur \
-	powerstation-bin \
 	python-vdf \
-	r8152-dkms \
 	r8168-dkms \
 	retroarch-autoconfig-udev-git \
 	rtl8812au-dkms-git \
@@ -214,7 +197,8 @@ export AUR_PACKAGES="\
 	rtl8821au-dkms-git \
 	rtw89-dkms-git \
 	ryzenadj-git \
-	steam_notif_daemon \
+	ryzenadj-controller-git \
+	rz608-fix-git \
 	steam-removable-media-git \
 	wyvern \
 	zenergy-dkms-git \
@@ -230,7 +214,7 @@ export SERVICES="\
 	haveged \
 	home-swapfile.swap \
 	lightdm \
-	powerstation \
+	ryzenadj-controller \
 	sshd \
 	systemd-timesyncd \
 	swapfile \
@@ -239,7 +223,7 @@ export SERVICES="\
 export USER_SERVICES="\
 	chimera.service \
 	gamemoded.service \
-	pipewire \
+	ryzen-tctl \
 	steam-patch.service \
 "
 
@@ -284,7 +268,6 @@ postinstallhook() {
 	# remove dolphin standalone emulator files (only need /usr/share/dolphin-emu/sys)
 	rm /usr/bin/dolphin-emu
 	rm /usr/bin/dolphin-emu-nogui
-	# dolphin-tool is no longer created in new builds?
 	#rm /usr/bin/dolphin-tool
 	rm /usr/share/applications/dolphin-emu.desktop
 
@@ -308,7 +291,4 @@ postinstallhook() {
 
 	# set permissions for intel_gpu_top and mangohud
 	setcap cap_perfmon=+ep /usr/bin/intel_gpu_top
-
-	# remove r8169 blacklist in /usr, leave it up to the user
-	rm /usr/lib/modprobe.d/r8168-dkms.conf
 }
